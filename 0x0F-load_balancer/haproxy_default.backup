@@ -1,0 +1,17 @@
+
+defaults
+  mode http
+  timeout client 15s
+  timeout connect 10s
+  timeout server 15s
+  timeout http-request 10s
+
+frontend milo-tech-frontend
+    bind *:80
+    default_backend milo-tech-backend
+
+backend milo-tech-backend
+    balance roundrobin
+    server 530648-web-01 54.157.148.52:80 check
+    server 530648-web-02 34.201.61.206:80 check
+
