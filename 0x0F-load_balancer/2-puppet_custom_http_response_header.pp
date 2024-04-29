@@ -1,4 +1,3 @@
-
 # Setup New Ubuntu server with nginx
 # and add a custom HTTP header
 
